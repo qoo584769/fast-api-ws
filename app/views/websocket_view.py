@@ -22,9 +22,9 @@ async def websocket_endpoint(websocket: WebSocket, room_id: str):
 		await websocket_manager.disconnect_websocket(room_id, message.user_email)
 
 
-@router.websocket('/ws')
-async def websocket_endpoint2(websocket: WebSocket):
-	await websocket.accept()
-	while True:
-		data = await websocket.receive_text()
-		await websocket.send_text(f'Message text was: {data}')
+# @router.websocket('/ws')
+# async def websocket_endpoint2(websocket: WebSocket):
+# 	await websocket.accept()
+# 	while True:
+# 		data = await websocket.receive_text()
+# 		await websocket.send_text(f'Message text was: {data}')
